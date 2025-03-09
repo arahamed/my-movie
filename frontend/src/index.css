@@ -1,0 +1,23 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+@media(prefers-color-scheme:dark){
+    body{
+        color: white;
+        background-color: #222222;
+    }
+    input{
+        color: black;
+        background-color: white;
+    }
+}
