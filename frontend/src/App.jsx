@@ -10,7 +10,7 @@ function App() {
     <>
       <ToastContainer/>
       <Navigation/>
-      <main className="">
+      <main className=" ">
         <Outlet/>
       </main>
     </>

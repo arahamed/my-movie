@@ -23,8 +23,8 @@ const Login = () => {
   const redirect = sp.get("redirect") || "/"
 
   useEffect(()=>{
-    if (userInfo && userInfo.isVerified) {
-      navigate(redirect)
+    if (userInfo) {
+      navigate(userInfo.isVerified ? redirect : '/verify');
     }
   },[navigate,redirect,userInfo]);
 

@@ -4,8 +4,11 @@ import { createGenre, listOfGenres, readGenre, removeGenre, updateGenre } from '
 
 const genreRoutes = express.Router();
 
-genreRoutes.route('/').post(authenicate, authorizeAdmin, createGenre);
+genreRoutes
+  .route('/')
+  .post(authenicate, authorizeAdmin, createGenre)
+  .get(listOfGenres);
 genreRoutes.route('/:id').put(authenicate, authorizeAdmin, updateGenre).delete(authenicate,authorizeAdmin,removeGenre).get(readGenre)
-genreRoutes.get("/genres",listOfGenres)
+
 
 export default genreRoutes;

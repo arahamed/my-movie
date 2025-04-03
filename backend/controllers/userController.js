@@ -193,7 +193,8 @@ const getUser = asyncHandler(async(req,res)=>{
         res.status(200).json({
             _id:user._id,
             username:user.username,
-            email:user.email
+            email: user.email,
+            isVerified:user.isVerified
         })
         
     } catch (error) {

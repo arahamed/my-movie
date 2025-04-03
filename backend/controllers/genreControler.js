@@ -78,8 +78,7 @@ const removeGenre = asyncHandler(async (req, res) => {
       res.status(404);
       throw new Error('Genre not found');
     }
-
-    res.status(204).send();
+    res.status(201).json(removed);
   } catch (error) {
     console.log(error);
     res
